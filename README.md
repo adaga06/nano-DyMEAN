@@ -9,7 +9,7 @@ We start with DyMEAN paper implimentation, and modify that scripts to avoid the 
 
 
 ## Modifications
-Key modifications were made to several files to enhance the framework's compatibility with Nanobodies:
+Key modifications were made to several files to enhance the framework's compatibility with Nanobodies in training and testing. Altough for now, we have used their checkpoint to see the results, to see how much we loose in terms of performace if light chain is lost:
 - **Preprocessing & Dataloading**: `dataset.py`, `framework_templates.py`, `pdb_utils.py`
 - **CDR File Generation**: `generate.py`
 - **Metrics Calculation**: `calculate_metrics.py`
