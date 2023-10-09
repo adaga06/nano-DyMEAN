@@ -19,11 +19,22 @@ the input for dyMEAN is just the json files(train.json, valid.json and test.json
 | DockQ                  | 0.4089 | -0.411          | 0.138 (4fqj) | 0.971 (1ic7)  |
 
 ## Reproducibility Metrics
-Following are the metrics obtained after training exclusively on heavy chains:
+Although for now, we have used their checkpoint to see the results, for complete reproducibility, we are training it from scratch and report the results.
+
+| Metric                 | Score  | Pearson Correl. | Lowest (PDB) | Highest (PDB) |
+|------------------------|--------|-----------------|--------------|---------------|
+| AAR                    |        |                 |              |               |
+| CAAR                   |        |                 |              |               |
+| RMSD(CA) Aligned       |        |                 |              |               |
+| RMSD(CA) CDRH3         |        |                 |              |               |
+| RMSD(CA) CDRH3 Aligned |        |                 |              |               |
+| TMscore                |        |                 |              |               |
+| LDDT                   |        |                 |              |               |
+| DockQ                  |        |                 |              |               |
 
 
 ## Modifications
-Key modifications were made to several files to enhance the framework's compatibility with Nanobodies in training and testing. Altough for now, we have used their checkpoint to see the results, to see how much we loose in terms of performace if light chain is lost:
+Key modifications were made to several files to enhance the framework's compatibility with Nanobodies in training and testing. Although for now, we have used their checkpoint to see the results, to see how much we lose in terms of performance if light chain is lost:
 - **Preprocessing & Dataloading**: `dataset.py`, `framework_templates.py`, `pdb_utils.py`
 - **CDR File Generation**: `generate.py`
 - **Metrics Calculation**: `calculate_metrics.py`
@@ -33,16 +44,6 @@ For ease of reference, all changes in these files are commented on, highlighting
 ## Provided Files
 Only the modified files are provided in this repository. These can replace their counterparts in the original dyMEAN framework.
 
-## Additional Resources
-A comprehensive Jupyter Notebook is included, offering insights into CDR (Complementarity-Determining Regions) design. The notebook covers:
-
-1. **Complex Classes**: Introduction to the structures of interest.
-2. **Graph Features**: Discussion on graph-based features derived from the structures.
-3. **Dataloading**: Procedures for loading and preprocessing data.
-4. **Example Datapoint**: A walkthrough of an example datapoint, which in our context is an Antigen-antibody complex. Note: The provided antibody may or may not include a light chain.
-5. **Machine Learning Modules**: Overview of the neural network architectures and algorithms used.
-6. **Utility Functions**: Auxiliary functions that support the main framework.
-7. **Trainer Class**: The class responsible for orchestrating the training process.
 
 ## Results Overview of Antibody without considering Light chain using their checkpoint.
 
@@ -57,5 +58,27 @@ A comprehensive Jupyter Notebook is included, offering insights into CDR (Comple
 | LDDT                   | 0.823  | -0.355          | 0.737 (4ydk) | 0.876 (5d93)  |
 | DockQ                  | 0.411  | -0.381          | 0.136 (4fqj) | 0.970 (1ic7)  |
 
-## Reproducibility Metrics after training on heavy chain alone:
+## Reproducibility Metrics after training from scratch without considering Light chain:
 
+| Metric                 | Score  | Pearson Correl. | Lowest (PDB) | Highest (PDB) |
+|------------------------|--------|-----------------|--------------|---------------|
+| AAR                    |        |                 |              |               |
+| CAAR                   |        |                 |              |               |
+| RMSD(CA) Aligned       |        |                 |              |               |
+| RMSD(CA) CDRH3         |        |                 |              |               |
+| RMSD(CA) CDRH3 Aligned |        |                 |              |               |
+| TMscore                |        |                 |              |               |
+| LDDT                   |        |                 |              |               |
+| DockQ                  |        |                 |              |               |
+
+
+## Additional Resources
+A comprehensive Jupyter Notebook is included, offering insights into CDR (Complementarity-Determining Regions) design. The notebook covers:
+
+1. **Complex Classes**: Introduction to the structures of interest.
+2. **Graph Features**: Discussion on graph-based features derived from the structures.
+3. **Dataloading**: Procedures for loading and preprocessing data.
+4. **Example Datapoint**: A walkthrough of an example datapoint, which in our context is an Antigen-antibody complex. Note: The provided antibody may or may not include a light chain.
+5. **Machine Learning Modules**: Overview of the neural network architectures and algorithms used.
+6. **Utility Functions**: Auxiliary functions that support the main framework.
+7. **Trainer Class**: The class responsible for orchestrating the training process.
