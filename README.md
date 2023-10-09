@@ -1,38 +1,17 @@
-nano-DyMEAN
-===========
+# nano-DyMEAN
 
-Description:
-------------
-This repository contains adaptations of the dyMEAN framework, specialized for Nanobody analysis. It provides insights into antibody structures, specifically exploring without utilizing the Light chain. The repository demonstrates various metrics and results achieved using pre-existing checkpoints.
+## Description
+Personal modifications of the dyMEAN framework tailored for Nanobody analysis.
 
-Results Overview:
------------------
+## Results Overview
 
-+------------------------+---------+------------------+---------+----------+
-| Metric                 | Score   | Pearson Correl.  | Lowest  | Highest  |
-+------------------------+---------+------------------+---------+----------+
-| AAR H3                 | 0.432   | -0.511           | 0.133   | 0.857    |
-|                        |         | (PDB: 5f9o)      | (PDB: 1ic7)        |
-+------------------------+---------+------------------+---------+----------+
-| CAAR H3                | 0.286   | -0.299           | 0.0     | 0.800    |
-|                        |         | (PDB: 4ffv)      | (PDB: 1ic7)        |
-+------------------------+---------+------------------+---------+----------+
-| RMSD(CA) Aligned       | 1.177   | 0.385            | 0.711   | 2.204    |
-|                        |         | (PDB: 4ffv)      | (PDB: 3bn9)        |
-+------------------------+---------+------------------+---------+----------+
-| RMSD(CA) CDRH3         | 8.070   | 0.376            | 0.742   | 22.473   |
-|                        |         | (PDB: 1ic7)      | (PDB: 3w9e)        |
-+------------------------+---------+------------------+---------+----------+
-| RMSD(CA) CDRH3 Aligned | 1.612   | 0.411            | 0.546   | 3.831    |
-|                        |         | (PDB: 1a2y)      | (PDB: 4ydk)        |
-+------------------------+---------+------------------+---------+----------+
-| TMscore                | 0.945   | -0.367           | 0.902   | 0.972    |
-|                        |         | (PDB: 4ydk)      | (PDB: 4ffv)        |
-+------------------------+---------+------------------+---------+----------+
-| LDDT                   | 0.823   | -0.355           | 0.737   | 0.876    |
-|                        |         | (PDB: 4ydk)      | (PDB: 5d93)        |
-+------------------------+---------+------------------+---------+----------+
-| DockQ                  | 0.411   | -0.381           | 0.136   | 0.970    |
-|                        |         | (PDB: 4fqj)      | (PDB: 1ic7)        |
-+------------------------+---------+------------------+---------+----------+
-
+| Metric                 | Score  | Pearson Correl. | Lowest (PDB) | Highest (PDB) |
+|------------------------|--------|-----------------|--------------|---------------|
+| AAR H3                 | 0.432  | -0.511          | 0.133 (5f9o) | 0.857 (1ic7)  |
+| CAAR H3                | 0.286  | -0.299          | 0.0 (4ffv)   | 0.800 (1ic7)  |
+| RMSD(CA) Aligned       | 1.177  | 0.385           | 0.711 (4ffv) | 2.204 (3bn9)  |
+| RMSD(CA) CDRH3         | 8.070  | 0.376           | 0.742 (1ic7) | 22.473 (3w9e) |
+| RMSD(CA) CDRH3 Aligned | 1.612  | 0.411           | 0.546 (1a2y) | 3.831 (4ydk)  |
+| TMscore                | 0.945  | -0.367          | 0.902 (4ydk) | 0.972 (4ffv)  |
+| LDDT                   | 0.823  | -0.355          | 0.737 (4ydk) | 0.876 (5d93)  |
+| DockQ                  | 0.411  | -0.381          | 0.136 (4fqj) | 0.970 (1ic7)  |
