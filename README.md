@@ -5,7 +5,7 @@ Personal modifications of the dyMEAN framework tailored for Nanobody analysis.
 We start with DyMEAN paper implimentation, and modify that scripts to avoid the use of lighchain explicly.
 the input for dyMEAN is just the json files(train.json, valid.json and test.json) and all_structure folders which has all pdb structures
 
-## Results Overview or reproducducibility of results from DyMEAN Paper using their checkpoint.
+## Results Overview or reproducibility of results from DyMEAN Paper using their checkpoint.
 
 | Metric                 | Score  | Pearson Correl. | Lowest (PDB) | Highest (PDB) |
 |------------------------|--------|-----------------|--------------|---------------|
@@ -18,6 +18,8 @@ the input for dyMEAN is just the json files(train.json, valid.json and test.json
 | LDDT                   | 0.8451 | -0.346          | 0.7863 (4ydk)| 0.8991 (1ic7) |
 | DockQ                  | 0.4089 | -0.411          | 0.138 (4fqj) | 0.971 (1ic7)  |
 
+## Reproducibility Metrics
+Following are the metrics obtained after training exclusively on heavy chains:
 
 
 ## Modifications
@@ -42,7 +44,7 @@ A comprehensive Jupyter Notebook is included, offering insights into CDR (Comple
 6. **Utility Functions**: Auxiliary functions that support the main framework.
 7. **Trainer Class**: The class responsible for orchestrating the training process.
 
-## Results Overview or reproducducibility of results from DyMEAN Paper using their checkpoint.
+## Results Overview or reproducibility of results from DyMEAN Paper using their checkpoint.
 
 | Metric                 | Score  | Pearson Correl. | Lowest (PDB) | Highest (PDB) |
 |------------------------|--------|-----------------|--------------|---------------|
@@ -54,3 +56,6 @@ A comprehensive Jupyter Notebook is included, offering insights into CDR (Comple
 | TMscore                | 0.945  | -0.367          | 0.902 (4ydk) | 0.972 (4ffv)  |
 | LDDT                   | 0.823  | -0.355          | 0.737 (4ydk) | 0.876 (5d93)  |
 | DockQ                  | 0.411  | -0.381          | 0.136 (4fqj) | 0.970 (1ic7)  |
+
+## Reproducibility Metrics after training on heavy chain alone:
+
