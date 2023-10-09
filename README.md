@@ -3,7 +3,7 @@
 ## Description
 Personal modifications of the dyMEAN framework tailored for Nanobody analysis.
 We start with DyMEAN paper implimentation, and modify that scripts to avoid the use of lighchain explicly.
-
+the input for dyMEAN is just the json files(train.json, valid.json and test.json) and all_structure folders which has all pdb structures
 
 ## Results Overview or reproducducibility of results from DyMEAN Paper.
 
