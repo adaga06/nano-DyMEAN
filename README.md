@@ -1,8 +1,8 @@
 # nano-DyMEAN
 
 ## Description
-Personal modifications of the dyMEAN framework tailored for Nanobody analysis.
-We start with DyMEAN paper implimentation, and modify that scripts to avoid the use of lighchain explicly.
+Personal modifications of the dyMEAN framework tailored for Nanobody analysis
+We start with DyMEAN paper implementation and modify that script to avoid the use of light chain explicitly.
 the input for dyMEAN is just the json files(train.json, valid.json and test.json) and all_structure folders which has all pdb structures
 
 ## Results Overview or reproducibility of results from DyMEAN Paper using their checkpoint.
@@ -28,7 +28,7 @@ Key modifications were made to several files to enhance the framework's compatib
 - **CDR File Generation**: `generate.py`
 - **Metrics Calculation**: `calculate_metrics.py`
 
-For ease of reference, all changes in these files are commented, highlighting the differences from the original dyMEAN implementation.
+For ease of reference, all changes in these files are commented on, highlighting the differences from the original dyMEAN implementation.
 
 ## Provided Files
 Only the modified files are provided in this repository. These can replace their counterparts in the original dyMEAN framework.
@@ -44,7 +44,7 @@ A comprehensive Jupyter Notebook is included, offering insights into CDR (Comple
 6. **Utility Functions**: Auxiliary functions that support the main framework.
 7. **Trainer Class**: The class responsible for orchestrating the training process.
 
-## Results Overview or reproducibility of results from DyMEAN Paper using their checkpoint.
+## Results Overview of Antibody without considering Light chain using their checkpoint.
 
 | Metric                 | Score  | Pearson Correl. | Lowest (PDB) | Highest (PDB) |
 |------------------------|--------|-----------------|--------------|---------------|
