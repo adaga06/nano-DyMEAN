@@ -101,7 +101,9 @@ A comprehensive Jupyter Notebook is included, offering insights into CDR (Comple
 6. **Utility Functions**: Auxiliary functions that support the main framework.
 7. **Trainer Class**: The class responsible for orchestrating the training process.
 
-# Used the checkpoint(Trained on Antibody), tested on 56 Nanobodies(Nb_test):
+# Used the checkpoint(Trained on Antibody), 
+
+## 1.Tested on 56 Nanobodies(Representative Nanobodies)-Nb_Test:
 
 | Metric                  | Score   | Pearson Correl. | Lowest (PDB)  | Highest (PDB)  |
 |-------------------------|---------|-----------------|---------------|----------------|
@@ -113,4 +115,17 @@ A comprehensive Jupyter Notebook is included, offering insights into CDR (Comple
 | TMscore                 | 0.884   | 0.119           | 5ivn (0.795)  | 5e1h (0.956)   |
 | LDDT                    | 0.724   | 0.073           | 7n9b (0.614)  | 5lhr (0.843)   |
 | DockQ                   | 0.284   | 0.169           | 7wn1 (0.080)  | 7d5q (0.680)   |
+
+## 1.Tested on 453 Nanobodies(All curated Nanobodies)-vhh_uniquefrom_all_uniquecdrh3:
+
+| Metric                 | Score    | Pearson Correl. | Lowest (PDB)       | Highest (PDB)      |
+|------------------------|----------|-----------------|--------------------|--------------------|
+| AAR                    | 0.191    | -0.0048         | 0.0, pdb: 5l21     | 0.6364, pdb: 6rqm  |
+| CAAR                   | 0.142    | 0.0425          | 0.0, pdb: 5l21     | 1.0, pdb: 7qcq     |
+| RMSD(CA) Aligned       | 2.637    | 0.0091          | 0.8818, pdb: 7epb  | 11.9895, pdb: 7q1u |
+| RMSD(CA) CDRH3         | 10.4738  | -0.0116         | 4.4262, pdb: 7qbd  | 31.0359, pdb: 6obc |
+| RMSD(CA) CDRH3 Aligned | 3.1077   | 0.1129          | 0.1973, pdb: 5vxl  | 6.5184, pdb: 1kxt  |
+| TMscore                | 0.8732   | 0.0842          | 0.3323, pdb: 7wuj  | 0.9581, pdb: 4dk6  |
+| LDDT                   | 0.7085   | -0.0009         | 0.3478, pdb: 7wuj  | 0.8832, pdb: 4dk6  |
+| DockQ                  | 0.282    | 0.0225          | 0, pdb: 7xtp       | 0.79, pdb: 6rvc    |
 
