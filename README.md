@@ -100,3 +100,17 @@ A comprehensive Jupyter Notebook is included, offering insights into CDR (Comple
 5. **Machine Learning Modules**: Overview of the neural network architectures and algorithms used.
 6. **Utility Functions**: Auxiliary functions that support the main framework.
 7. **Trainer Class**: The class responsible for orchestrating the training process.
+
+# Used the checkpoint(Trained on Antibody), tested on 56 Nanobodies(Nb_test):
+
+| Metric                  | Score   | Pearson Correl. | Lowest (PDB)  | Highest (PDB)  |
+|-------------------------|---------|-----------------|---------------|----------------|
+| AAR                     | 0.174   | 0.166           | 6x05 (0.000)  | 7nfq (0.444)   |
+| CAAR                    | 0.143   | 0.054           | 7zms (0.000)  | 6obg (1.000)   |
+| RMSD(CA) Aligned        | 2.499   | 0.012           | 5lhr (0.896)  | 7aqy (6.420)   |
+| RMSD(CA) CDRH3          | 10.340  | -0.128          | 7p78_4 (4.819)| 8cyj_4 (18.032)|
+| RMSD(CA) CDRH3 Aligned  | 2.996   | -0.027          | 7p78_4 (0.652)| 7aqy (5.850)   |
+| TMscore                 | 0.884   | 0.119           | 5ivn (0.795)  | 5e1h (0.956)   |
+| LDDT                    | 0.724   | 0.073           | 7n9b (0.614)  | 5lhr (0.843)   |
+| DockQ                   | 0.284   | 0.169           | 7wn1 (0.080)  | 7d5q (0.680)   |
+
