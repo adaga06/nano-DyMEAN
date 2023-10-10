@@ -101,7 +101,7 @@ A comprehensive Jupyter Notebook is included, offering insights into CDR (Comple
 6. **Utility Functions**: Auxiliary functions that support the main framework.
 7. **Trainer Class**: The class responsible for orchestrating the training process.
 
-# Used the checkpoint(Trained on Antibody), 
+# Used the checkpoint(Trained on Antibody), Tested on Nanobodies
 
 ## 1.Tested on 56 Nanobodies(Representative Nanobodies)-Nb_Test:
 
@@ -116,7 +116,7 @@ A comprehensive Jupyter Notebook is included, offering insights into CDR (Comple
 | LDDT                    | 0.724   | 0.073           | 7n9b (0.614)  | 5lhr (0.843)   |
 | DockQ                   | 0.284   | 0.169           | 7wn1 (0.080)  | 7d5q (0.680)   |
 
-## 1.Tested on 453 Nanobodies(All curated Nanobodies)-vhh_uniquefrom_all_uniquecdrh3:
+## 2.Tested on 453 Nanobodies(All curated Nanobodies)-vhh_uniquefrom_all_uniquecdrh3:
 
 | Metric                 | Score    | Pearson Correl. | Lowest (PDB)       | Highest (PDB)      |
 |------------------------|----------|-----------------|--------------------|--------------------|
