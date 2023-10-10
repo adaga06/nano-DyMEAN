@@ -21,6 +21,8 @@ the input for dyMEAN is just the json files(train.json, valid.json and test.json
 ## Reproducibility Metrics
 Although for now, we have used their checkpoint to see the results, for complete reproducibility, we are training it from scratch and reporting the results.
 
+# Trained on Antibody, tested on Nanobody
+
 | Metric                 | Score      | Pearson Correl. | Lowest (PDB)          | Highest (PDB)         |
 |------------------------|------------|-----------------|-----------------------|-----------------------|
 | AAR                    | 0.3944     | -0.2831         | 0.1333 (5f9o)         | 0.6364 (2adf)         |
@@ -61,6 +63,8 @@ Only the modified files are provided in this repository. These can replace their
 
 ## Reproducibility Metrics after training from scratch without considering Light chain:
 
+# Trained on Antibody, tested on Antibody
+
 | Metric                 | Score    | Pearson Correl. | Lowest (PDB)     | Highest (PDB)    |
 |------------------------|----------|-----------------|------------------|------------------|
 | AAR                    | 0.392    | -0.279          | 0.133 (5f9o)     | 0.636 (2adf)     |
@@ -71,6 +75,19 @@ Only the modified files are provided in this repository. These can replace their
 | TMscore                | 0.789    | -0.546          | 0.750 (1osp)     | 0.827 (5d93)     |
 | LDDT                   | 0.559    | -0.477          | 0.514 (4ydk)     | 0.590 (5d93)     |
 | DockQ                  | 0.285    | -0.047          | 0.076 (3uzq)     | 0.505 (1w72)     |
+
+# Trained on Nanobody, tested on Nanobody
+
+| Metric                 | Score   | Pearson Correl. | Lowest (PDB) | Highest (PDB) |
+|------------------------|---------|-----------------|--------------|---------------|
+| AAR                    | 0.396   | -0.248          | 5f9o (0.133) | 2adf (0.636)  |
+| CAAR                   | 0.266   | -0.138          | 5hi4 (0.0)   | 2adf (0.750)  |
+| RMSD(CA) Aligned       | 1.710   | 0.745           | 3l95 (1.351) | 4fqj (2.447)  |
+| RMSD(CA) CDRH3         | 11.597  | 0.170           | 2vxt (4.834) | 4qci (26.893) |
+| RMSD(CA) CDRH3 Aligned | 2.017   | 0.838           | 2xqy (1.179) | 4ot1 (3.897)  |
+| TMscore                | 0.880   | -0.589          | 3rkd (0.843) | 3l95 (0.909)  |
+| LDDT                   | 0.633   | -0.563          | 4ydk (0.577) | 2b2x (0.664)  |
+| DockQ                  | 0.319   | -0.008          | 4qci (0.042) | 5bv7 (0.638)  |
 
 
 ## Additional Resources
