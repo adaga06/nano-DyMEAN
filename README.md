@@ -19,18 +19,19 @@ the input for dyMEAN is just the json files(train.json, valid.json and test.json
 | DockQ                  | 0.4089 | -0.411          | 0.138 (4fqj) | 0.971 (1ic7)  |
 
 ## Reproducibility Metrics
-Although for now, we have used their checkpoint to see the results, for complete reproducibility, we are training it from scratch and report the results.
+Although for now, we have used their checkpoint to see the results, for complete reproducibility, we are training it from scratch and reporting the results.
 
-| Metric                 | Score  | Pearson Correl. | Lowest (PDB) | Highest (PDB) |
-|------------------------|--------|-----------------|--------------|---------------|
-| AAR                    |        |                 |              |               |
-| CAAR                   |        |                 |              |               |
-| RMSD(CA) Aligned       |        |                 |              |               |
-| RMSD(CA) CDRH3         |        |                 |              |               |
-| RMSD(CA) CDRH3 Aligned |        |                 |              |               |
-| TMscore                |        |                 |              |               |
-| LDDT                   |        |                 |              |               |
-| DockQ                  |        |                 |              |               |
+| Metric                 | Score      | Pearson Correl. | Lowest (PDB)          | Highest (PDB)         |
+|------------------------|------------|-----------------|-----------------------|-----------------------|
+| AAR                    | 0.3944     | -0.2831         | 0.1333 (5f9o)         | 0.6364 (2adf)         |
+| CAAR                   | 0.2580     | -0.1452         | 0.0000 (5hi4)         | 0.7500 (2adf)         |
+| RMSD(CA) Aligned       | 1.9963     | 0.4876          | 1.6099 (3k2u)         | 2.7405 (3ffd)         |
+| RMSD(CA) CDRH3         | 12.3620    | 0.1425          | 5.1546 (2xqy)         | 24.7095 (5bv7)        |
+| RMSD(CA) CDRH3 Aligned | 1.9514     | 0.8618          | 1.0713 (1fe8)         | 4.0119 (3bn9)         |
+| TMscore                | 0.9058     | -0.3828         | 0.8652 (3ffd)         | 0.9321 (3k2u)         |
+| LDDT                   | 0.5891     | -0.4897         | 0.5514 (4ydk)         | 0.6161 (3l95)         |
+| DockQ                  | 0.2820     | -0.0482         | 0.0580 (5hi4)         | 0.5520 (1w72)         |
+
 
 
 ## Modifications
