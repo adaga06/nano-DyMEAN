@@ -61,16 +61,16 @@ Only the modified files are provided in this repository. These can replace their
 
 ## Reproducibility Metrics after training from scratch without considering Light chain:
 
-| Metric                 | Score  | Pearson Correl. | Lowest (PDB) | Highest (PDB) |
-|------------------------|--------|-----------------|--------------|---------------|
-| AAR                    |        |                 |              |               |
-| CAAR                   |        |                 |              |               |
-| RMSD(CA) Aligned       |        |                 |              |               |
-| RMSD(CA) CDRH3         |        |                 |              |               |
-| RMSD(CA) CDRH3 Aligned |        |                 |              |               |
-| TMscore                |        |                 |              |               |
-| LDDT                   |        |                 |              |               |
-| DockQ                  |        |                 |              |               |
+| Metric                 | Score    | Pearson Correl. | Lowest (PDB)     | Highest (PDB)    |
+|------------------------|----------|-----------------|------------------|------------------|
+| AAR                    | 0.392    | -0.279          | 0.133 (5f9o)     | 0.636 (2adf)     |
+| CAAR                   | 0.256    | -0.142          | 0.000 (5hi4)     | 0.750 (2adf)     |
+| RMSD(CA) Aligned       | 2.520    | 0.748           | 2.082 (1fe8)     | 3.162 (4fqj)     |
+| RMSD(CA) CDRH3         | 12.286   | 0.149           | 5.266 (2xqy)     | 24.601 (5bv7)    |
+| RMSD(CA) CDRH3 Aligned | 2.015    | 0.849           | 1.033 (5d93)     | 4.148 (3bn9)     |
+| TMscore                | 0.789    | -0.546          | 0.750 (1osp)     | 0.827 (5d93)     |
+| LDDT                   | 0.559    | -0.477          | 0.514 (4ydk)     | 0.590 (5d93)     |
+| DockQ                  | 0.285    | -0.047          | 0.076 (3uzq)     | 0.505 (1w72)     |
 
 
 ## Additional Resources
