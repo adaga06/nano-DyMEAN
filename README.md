@@ -7,6 +7,7 @@ the input for dyMEAN is just the json files(train.json, valid.json and test.json
 
 ## Results Overview or reproducibility of results from DyMEAN Paper using their checkpoint.
 
+### Trained on antibody and tested on antibody
 | Metric                 | Score  | Pearson Correl. | Lowest (PDB) | Highest (PDB) |
 |------------------------|--------|-----------------|--------------|---------------|
 | AAR                    | 0.4299 | -0.528          | 0.083 (2xwt) | 0.857 (1ic7)  |
@@ -18,10 +19,23 @@ the input for dyMEAN is just the json files(train.json, valid.json and test.json
 | LDDT                   | 0.8451 | -0.346          | 0.7863 (4ydk)| 0.8991 (1ic7) |
 | DockQ                  | 0.4089 | -0.411          | 0.138 (4fqj) | 0.971 (1ic7)  |
 
-## Reproducibility Metrics
+
+### Trained on antibody and tested on antibody(removing light chain-Nanobody type)
+| Metric                 | Score  | Pearson Correl. | Lowest (PDB) | Highest (PDB) |
+|------------------------|--------|-----------------|--------------|---------------|
+| AAR                    | 0.432  | -0.511          | 0.133 (5f9o) | 0.857 (1ic7)  |
+| CAAR                   | 0.286  | -0.299          | 0.0 (4ffv)   | 0.800 (1ic7)  |
+| RMSD(CA) Aligned       | 1.177  | 0.385           | 0.711 (4ffv) | 2.204 (3bn9)  |
+| RMSD(CA) CDRH3         | 8.070  | 0.376           | 0.742 (1ic7) | 22.473 (3w9e) |
+| RMSD(CA) CDRH3 Aligned | 1.612  | 0.411           | 0.546 (1a2y) | 3.831 (4ydk)  |
+| TMscore                | 0.945  | -0.367          | 0.902 (4ydk) | 0.972 (4ffv)  |
+| LDDT                   | 0.823  | -0.355          | 0.737 (4ydk) | 0.876 (5d93)  |
+| DockQ                  | 0.411  | -0.381          | 0.136 (4fqj) | 0.970 (1ic7)  |
+
+## Reproducibility Metrics from scratch
 Although for now, we have used their checkpoint to see the results, for complete reproducibility, we are training it from scratch and reporting the results.
 
-# Trained on Antibody, tested on Nanobody
+### Trained on Antibody, tested on Antibody
 
 | Metric                 | Score      | Pearson Correl. | Lowest (PDB)          | Highest (PDB)         |
 |------------------------|------------|-----------------|-----------------------|-----------------------|
@@ -34,36 +48,7 @@ Although for now, we have used their checkpoint to see the results, for complete
 | LDDT                   | 0.5891     | -0.4897         | 0.5514 (4ydk)         | 0.6161 (3l95)         |
 | DockQ                  | 0.2820     | -0.0482         | 0.0580 (5hi4)         | 0.5520 (1w72)         |
 
-
-
-## Modifications
-Key modifications were made to several files to enhance the framework's compatibility with Nanobodies in training and testing. Although for now, we have used their checkpoint to see the results, to see how much we lose in terms of performance if light chain is lost:
-- **Preprocessing & Dataloading**: `dataset.py`, `framework_templates.py`, `pdb_utils.py`
-- **CDR File Generation**: `generate.py`
-- **Metrics Calculation**: `calculate_metrics.py`
-
-For ease of reference, all changes in these files are commented on, highlighting the differences from the original dyMEAN implementation.
-
-## Provided Files
-Only the modified files are provided in this repository. These can replace their counterparts in the original dyMEAN framework.
-
-
-## Results Overview of Antibody without considering Light chain using their checkpoint.
-
-| Metric                 | Score  | Pearson Correl. | Lowest (PDB) | Highest (PDB) |
-|------------------------|--------|-----------------|--------------|---------------|
-| AAR                    | 0.432  | -0.511          | 0.133 (5f9o) | 0.857 (1ic7)  |
-| CAAR                   | 0.286  | -0.299          | 0.0 (4ffv)   | 0.800 (1ic7)  |
-| RMSD(CA) Aligned       | 1.177  | 0.385           | 0.711 (4ffv) | 2.204 (3bn9)  |
-| RMSD(CA) CDRH3         | 8.070  | 0.376           | 0.742 (1ic7) | 22.473 (3w9e) |
-| RMSD(CA) CDRH3 Aligned | 1.612  | 0.411           | 0.546 (1a2y) | 3.831 (4ydk)  |
-| TMscore                | 0.945  | -0.367          | 0.902 (4ydk) | 0.972 (4ffv)  |
-| LDDT                   | 0.823  | -0.355          | 0.737 (4ydk) | 0.876 (5d93)  |
-| DockQ                  | 0.411  | -0.381          | 0.136 (4fqj) | 0.970 (1ic7)  |
-
-## Reproducibility Metrics after training from scratch without considering Light chain:
-
-# Trained on Antibody, tested on Antibody
+### Trained on Antibody, tested on Antibody(removing light chain-Nanobody type)
 
 | Metric                 | Score    | Pearson Correl. | Lowest (PDB)     | Highest (PDB)    |
 |------------------------|----------|-----------------|------------------|------------------|
@@ -76,7 +61,7 @@ Only the modified files are provided in this repository. These can replace their
 | LDDT                   | 0.559    | -0.477          | 0.514 (4ydk)     | 0.590 (5d93)     |
 | DockQ                  | 0.285    | -0.047          | 0.076 (3uzq)     | 0.505 (1w72)     |
 
-# Trained on Nanobody, tested on Nanobody
+### Trained on Antibody(removing light chain-Nanobody type), tested on Antibody(removing light chain-Nanobody type)
 
 | Metric                 | Score   | Pearson Correl. | Lowest (PDB) | Highest (PDB) |
 |------------------------|---------|-----------------|--------------|---------------|
@@ -88,6 +73,18 @@ Only the modified files are provided in this repository. These can replace their
 | TMscore                | 0.880   | -0.589          | 3rkd (0.843) | 3l95 (0.909)  |
 | LDDT                   | 0.633   | -0.563          | 4ydk (0.577) | 2b2x (0.664)  |
 | DockQ                  | 0.319   | -0.008          | 4qci (0.042) | 5bv7 (0.638)  |
+
+## Modifications
+Key modifications were made to several files to enhance the framework's compatibility with Nanobodies in training and testing. Although for now, we have used their checkpoint to see the results, to see how much we lose in terms of performance if light chain is lost:
+- **Preprocessing & Dataloading**: `dataset.py`, `framework_templates.py`, `pdb_utils.py`
+- **CDR File Generation**: `generate.py`
+- **Metrics Calculation**: `calculate_metrics.py`
+
+For ease of reference, all changes in these files are commented on, highlighting the differences from the original dyMEAN implementation.
+
+## Provided Files
+Only the modified files are provided in this repository. These can replace their counterparts in the original dyMEAN framework.
+
 
 
 ## Additional Resources
